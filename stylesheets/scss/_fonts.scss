@@ -1,0 +1,25 @@
+/*
+  Fonts
+  
+  Any @font-face or third party font imports should go in this file
+
+*/
+@font-face {
+	font-family: 'Majesti Banner Book';
+	src: url('/fonts/MajestiBanner-Book.eot');
+	src: url('/fonts/MajestiBanner-Book.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/MajestiBanner-Book.woff') format('woff'),
+		url('/fonts/MajestiBanner-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Majesti Banner Heavy';
+	src: url('/fonts/MajestiBanner-Heavy.eot');
+	src: url('/fonts/MajestiBanner-Heavy.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/MajestiBanner-Heavy.woff') format('woff'),
+		url('/fonts/MajestiBanner-Heavy.ttf') format('truetype');
+	font-weight: 900;
+	font-style: normal;
+}

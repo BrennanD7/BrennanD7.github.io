@@ -1,0 +1,44 @@
+/*
+	Layout goes in this file. Susy setup should go here too.
+	Layout classes should be prefixed `.l-`
+*/
+
+$susy: (
+  columns: $column-count,
+  use-custom: (rem:true),
+  global-box-sizing: border-box,
+  gutter-position: inside-static,
+  column-width: 96px,
+  gutters: $gutter-column/96px,
+  // debug: (
+  //   image: show-columns,
+  //   output: overlay,
+  //   toggle: bottom left,
+  // )
+);
+
+.l-container {
+  @include container(1200px);
+  @include clearfix;
+  padding-left: $gutter-body - gutter();
+  padding-right: $gutter-body - gutter();
+  .no-mediaqueries & {
+    min-width: $breakpoint-no-mediaqueries;
+  }
+}
+
+// Column classes
+$i: 1;
+@for $i from 1 through $column-count {
+  %col-#{$i},
+  .col-#{$i} {
+    @include span($i of $column-count);
+    &.no-gutter {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    @media (max-width: $breakpoint-mid) {
+      width: 100% !important; // Using !important to ensure width is overridden
+    }
+  }
+}

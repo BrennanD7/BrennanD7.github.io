@@ -1,0 +1,94 @@
+
+
+// Intro Sequence Animation
+
+@include keyframes(slideup-fadeout) {
+	0% {
+		@include opacity(1);
+		transform: translateY(0);
+	}
+	100% {
+		@include opacity(0);
+		transform: translateY(-80px);
+		display:none;
+	}
+}
+@include keyframes(slidedown-fadeout) {
+	0% {
+		@include opacity(1);
+		transform: translateY(0);
+	}
+	100% {
+		@include opacity(0);
+		transform: translateY(80px);
+		display:none;
+	}
+}
+@include keyframes(slidedown-fadein) {
+	0% {
+		@include opacity(0);
+		transform: translateY(-100px);
+	}
+	100% {
+		@include opacity(1);
+		transform: translateY(0);
+	}
+}
+@include keyframes(slidedown-fadeinsmall) {
+	0% {
+		@include opacity(0);
+		transform: translateY(-10px);
+	}
+	100% {
+		@include opacity(1);
+		transform: translateY(0);
+	}
+}
+@include keyframes(slideup-fadein) {
+	0% {
+		@include opacity(0);
+		transform: translateY(80px);
+	}
+	100% {
+		@include opacity(1);
+		transform: translateY(0);
+	}
+}
+@include keyframes(slideup-fadeinsmall) {
+	0% {
+		@include opacity(0);
+		transform: translateY(10px);
+	}
+	100% {
+		@include opacity(1);
+		transform: translateY(0);
+	}
+}
+@include keyframes(slideleft-fadein) {
+	0% {
+		@include opacity(0);
+		transform: translateX(-10px);
+	}
+	100% {
+		@include opacity(1);
+		transform: translateX(0);
+	}
+}
+@include keyframes(slideright-fadein) {
+	0% {
+		@include opacity(0);
+		transform: translateX(10px);
+	}
+	100% {
+		@include opacity(1);
+		transform: translateX(0);
+	}
+}
+@include keyframes(fadein) {
+	0% {
+		@include opacity(0);
+	}
+	100% {
+		@include opacity(1);
+	}
+}

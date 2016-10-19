@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie9 lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="icon" type="image/ico" href="favicon.ico" />
+
+    <!-- This bit of the uggliest code you've ever seen deals an icon font loading issue in IE8 -->
+    <!--[if IE 8]>
+      <style>html.ie-force-pseudo-refresh :before,html.ie-force-pseudo-refresh :after {content : none !important;}</style>
+      <script>window.attachEvent&&!window.addEventListener&&window.attachEvent("onload",function(){var a=document.documentElement,b=a.className;a.className=b+" ie-force-pseudo-refresh",setTimeout(function(){a.className=b},10)});</script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <link href="stylesheets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
+    <!--<script src="js/dist/application-head.js" type="text/javascript"></script>-->
+
+</head>
+	<body>
+	<div id="hero" class="hero">
+		<div class="outer-content">
+			<div class="b">
+				<img src="/images/b.png" alt="B"/>
+			</div>
+			<div class="a">
+				<img src="/images/a.png" alt="A"/>
+			</div>
+			<div class="rings">
+				<img src="/images/rings.png" alt="rings"/>
+			</div>
+			<div class="twenty">
+				<img src="/images/2017.png" alt="2017"/>
+			</div>
+			<div class="left-text">
+				<span>JESSICA + BRENNAN</span>
+			</div>
+			<div class="right-text">
+				<span>OFFICIAL GROOSMAN INVITE</span>
+			</div>
+		</div>
+		<div class="hero__header">
+			<img src="/images/logo.png" alt="Jessica+Brennan2017"/>
+		</div>
+		<div class="scene-1">
+			<div class="left-content">
+				<h1>Your Service is Required &mdash;</h1>
+				<p>as a <strong>groomsman</strong> during the wedding of Jessica and Brennan in 2017.</p>
+			</div>
+			<div class="center-content">
+				<img src="/images/flower.png" alt="Ben"/>
+			</div>
+			<div class="bottom-content">
+				<p><strong>Do you accept?</strong></p>
+				<form>
+					<input id="next" type="button" value="DAMN STRAIGHT I DO"></input>
+				</form>
+			</div>
+		</div>
+		<div class="scene-2">
+			<h2>Right Answer.</h2>
+			<p>You win a prize. Choose One.</p>
+			<form action="https://formspree.io/brennangleason19@gmail.com" method="POST">
+				<div class="u-clearfix">
+					<div class="left-option">
+						<img src="/images/bikeone.png"/>
+						<h3>A DAY AT WHISTLER BIKE PARK</h3>
+						<span>(SUMMER 2017)</span><br/>
+						<input type="radio" name="bikepark" value="whistler" class="choice"/>
+					</div>
+					<div class="right-option">
+						<img src="/images/biketwo.png"/>
+						<h3>A DAY AT BIG WHITE BIKE PARK</h3>
+						<span>(SUMMER 2017)</span><br/>
+						<input type="radio" name="bikepark" value="bigwhite" class="choice"/>
+					</div>
+				</div>
+				<div class="center-box">
+					<input type="submit" value="Submit">
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="js/src/vendor/TweenMax.min.js"></script>
+	<script src="js/src/vendor/ScrollMagic.js"></script>
+	<script src="js/src/vendor/plugins/animation.gsap.js"></script>
+	<script src="js/src/vendor/plugins/debug.addIndicators.js"></script>
+	<script src="js/src/vendor/plugins/CSSRulePlugin.min.js"></script>
+	<script src="js/src/vendor/plugins/CSSPlugin.min.js"></script>
+
+    <script>
+    	$(document).ready(function(){
+    	    $('#next').click(function(e){
+    	        $(".scene-1").hide();
+    	        $(".scene-2").show();
+    	    });
+    	});
+    </script>
+
+	</body>
+	<script src="js/dist/application.js" type="text/javascript"></script>
+</html>
